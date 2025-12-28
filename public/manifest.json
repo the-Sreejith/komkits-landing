@@ -1,0 +1,29 @@
+{
+    "name": "Komkits - AI-Powered E-commerce Bookkeeping",
+    "short_name": "Komkits",
+    "description": "The all-in-one bookkeeping and AI automation platform for modern e-commerce businesses.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/logo-icon.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/logo-icon.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": [
+        "business",
+        "finance",
+        "productivity"
+    ]
+}

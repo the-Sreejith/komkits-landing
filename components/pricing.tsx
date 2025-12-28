@@ -59,20 +59,20 @@ export function Pricing() {
 
   useEffect(() => {
     (async function () {
-      const cal = await getCalApi({"namespace":"15min"});
-      cal("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+      const cal = await getCalApi({ "namespace": "15min" });
+      cal("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
     })();
   }, []);
 
   return (
-    <section id="pricing" className="py-24 bg-background">
+    <section id="pricing" className="py-24 bg-background" aria-label="Pricing plans">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-sm font-semibold tracking-wider text-primary uppercase">Pricing</h2>
           <h3 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">
             Simple, transparent pricing
           </h3>
-          
+
           <div className="flex items-center justify-center gap-4 mt-8">
             <span className={cn("text-sm font-medium", billingCycle === "monthly" ? "text-foreground" : "text-muted-foreground")}>
               Monthly
@@ -136,8 +136,8 @@ export function Pricing() {
               </ul>
 
               <div className="mt-auto space-y-4">
-                 <Button 
-                  className={cn("w-full", plan.popular ? "bg-black hover:bg-gray-900 text-white" : "")} 
+                <Button
+                  className={cn("w-full", plan.popular ? "bg-black hover:bg-gray-900 text-white" : "")}
                   variant={plan.popular ? "default" : "outline"}
                   data-cal-namespace="15min"
                   data-cal-link="the-sreejith/15min"

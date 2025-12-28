@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Globe } from "lucide-react";
 
 export function Footer() {
@@ -7,17 +8,28 @@ export function Footer() {
       <div className="container mx-auto px-4 md:px-6 py-12 md:py-16 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
           <div className="space-y-4">
-            <div className="flex items-center gap-2 font-bold text-xl">
-              <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground">
-                K
-              </div>
-              Komkits
-            </div>
+            <Link href="/" className="flex items-center gap-2" aria-label="Komkits - Home">
+              <Image
+                src="/logo-icon.png"
+                alt="Komkits"
+                width={32}
+                height={32}
+                className="h-8 w-8 block dark:hidden"
+              />
+              <Image
+                src="/logo-icon-dark.png"
+                alt="Komkits"
+                width={32}
+                height={32}
+                className="h-8 w-8 hidden dark:block"
+              />
+              <span className="font-bold text-xl">Komkits</span>
+            </Link>
             <p className="text-sm text-muted-foreground">
               The all-in-one bookkeeping and AI automation platform for modern e-commerce businesses.
             </p>
           </div>
-          
+
           <div>
             <h3 className="font-semibold mb-4">Product</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
@@ -47,7 +59,7 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        
+
         <div className="mt-12 md:mt-16 pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Komkits. All rights reserved.

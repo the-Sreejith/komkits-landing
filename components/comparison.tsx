@@ -45,12 +45,12 @@ const comparisonData = [
 
 export function ComparisonSection() {
   return (
-    <section className="py-20 sm:py-32 bg-background">
+    <section id="comparison" className="py-20 sm:py-32 bg-background" aria-label="Comparison with traditional bookkeeping">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 max-w-3xl mx-auto">
-            <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 mb-4">
-                Why Choose Komkits
-            </div>
+          <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 mb-4">
+            Why Choose Komkits
+          </div>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4 text-foreground">
             Old Way vs. The Komkits Way
           </h2>
@@ -60,7 +60,7 @@ export function ComparisonSection() {
         </div>
 
         <div className="max-w-5xl mx-auto">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -69,21 +69,21 @@ export function ComparisonSection() {
           >
             {/* Table Header */}
             <div className="grid grid-cols-1 md:grid-cols-12 bg-muted/30 divide-y md:divide-y-0 md:divide-x divide-border border-b border-border">
-               <div className="p-6 md:col-span-4 font-semibold text-foreground">
-                  
-               </div>
-               <div className="p-6 md:col-span-4 font-bold text-xl text-center text-foreground">
-                  Traditional Bookkeeping
-               </div>
-               <div className="p-6 md:col-span-4 font-bold text-xl text-center text-foreground">
-                  With Komkits
-               </div>
+              <div className="p-6 md:col-span-4 font-semibold text-foreground">
+
+              </div>
+              <div className="p-6 md:col-span-4 font-bold text-xl text-center text-foreground">
+                Traditional Bookkeeping
+              </div>
+              <div className="p-6 md:col-span-4 font-bold text-xl text-center text-foreground">
+                With Komkits
+              </div>
             </div>
 
             {/* Table Body */}
             <div className="divide-y divide-border">
               {comparisonData.map((item, index) => (
-                <div 
+                <div
                   key={index}
                   className="grid grid-cols-1 md:grid-cols-12 divide-y md:divide-y-0 md:divide-x divide-border group hover:bg-muted/10 transition-colors"
                 >

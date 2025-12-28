@@ -67,7 +67,7 @@ const ReviewCard = ({
         {body}
       </blockquote>
       <div className="mt-auto pt-2 flex flex-row items-center gap-3">
-        <img className="rounded-full" width="40" height="40" alt="" src={img} />
+        <img className="rounded-full" width="40" height="40" alt={`${name} - ${username} review`} src={img} />
         <div className="flex flex-col">
           <figcaption className="text-base font-semibold text-gray-900 dark:text-white">
             {name}
@@ -81,7 +81,7 @@ const ReviewCard = ({
 
 export function Testimonials() {
   return (
-    <section className="py-20 bg-gray-50 dark:bg-neutral-900">
+    <section id="testimonials" className="py-20 bg-gray-50 dark:bg-neutral-900" aria-label="Customer testimonials">
       <div className="container mx-auto px-4 mb-12 text-center">
         <h2 className="mx-auto max-w-4xl text-3xl font-medium tracking-tight sm:text-5xl md:text-6xl mb-4 text-gray-900 dark:text-white">
           Trusted by E-commerce <br /> Businesses Worldwide
